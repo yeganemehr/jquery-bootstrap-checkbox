@@ -1,0 +1,387 @@
+.checkbox {
+  padding-left: 14px;
+}
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+.checkbox label,
+label.checkbox-inline {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 20px;
+}
+.checkbox label::before,
+label.checkbox-inline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.checkbox label::after,
+label.checkbox-inline::after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  margin-top: 4px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+.checkbox label.focus::before,
+label.checkbox-inline.focus::before {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.checkbox label.checked::after,
+label.checkbox-inline.checked::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+.checkbox label.indeterminate::after,
+label.checkbox-inline.indeterminate::after {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 3px;
+  background-color: #555555;
+  border-radius: 2px;
+  margin-left: -16.5px;
+  margin-top: 7px;
+}
+.checkbox label.disabled,
+label.checkbox-inline.disabled {
+  opacity: 0.65;
+}
+.checkbox label.disabled::before,
+label.checkbox-inline.disabled::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+.checkbox label input[type="checkbox"],
+label.checkbox-inline input[type="checkbox"] {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.checkbox label input[type="checkbox"]:disabled,
+label.checkbox-inline input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+.checkbox label input[type="checkbox"]:disabled + label,
+label.checkbox-inline input[type="checkbox"]:disabled + label {
+  opacity: 0.65;
+}
+.checkbox label input[type="checkbox"]:disabled + label::before,
+label.checkbox-inline input[type="checkbox"]:disabled + label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+.checkbox-primary label.checked::before,
+label.checkbox-primary.checked::before {
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.checkbox-primary label.checked::after,
+label.checkbox-primary.checked::after {
+  color: #fff;
+}
+.checkbox-danger label.checked::before,
+label.checkbox-danger.checked::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.checkbox-danger label.checked::after,
+label.checkbox-danger.checked::after {
+  color: #fff;
+}
+.checkbox-info label.checked::before,
+label.checkbox-info.checked::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.checkbox-info label.checked::after,
+label.checkbox-info.checked::after {
+  color: #fff;
+}
+.checkbox-warning label.checked::before,
+label.checkbox-warning.checked::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.checkbox-warning label.checked::after,
+label.checkbox-warning.checked::after {
+  color: #fff;
+}
+.checkbox-success label.checked::before,
+label.checkbox-success.checked::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.checkbox-success label.checked::after,
+label.checkbox-success.checked::after {
+  color: #fff;
+}
+.checkbox-primary label.indeterminate::before,
+label.checkbox-primary.indeterminate::before {
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+.checkbox-primary label.indeterminate::after,
+label.checkbox-primary.indeterminate::after {
+  background-color: #fff;
+}
+.checkbox-danger label.indeterminate::before,
+label.checkbox-danger.indeterminate::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+.checkbox-danger label.indeterminate::after,
+label.checkbox-danger.indeterminate::after {
+  background-color: #fff;
+}
+.checkbox-info label.indeterminate::before,
+label.checkbox-info.indeterminate::before {
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+.checkbox-info label.indeterminate::after,
+label.checkbox-info.indeterminate::after {
+  background-color: #fff;
+}
+.checkbox-warning label.indeterminate::before,
+label.checkbox-warning.indeterminate::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.checkbox-warning label.indeterminate::after,
+label.checkbox-warning.indeterminate::after {
+  background-color: #fff;
+}
+.checkbox-success label.indeterminate::before,
+label.checkbox-success.indeterminate::before {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+.checkbox-success label.indeterminate::after,
+label.checkbox-success.indeterminate::after {
+  background-color: #fff;
+}
+.radio {
+  padding-left: 20px;
+}
+.radio input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.radio input[type="radio"]:disabled {
+  cursor: not-allowed;
+}
+.radio label,
+label.radio-inline {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 20px;
+}
+.radio label::before,
+label.radio-inline::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+.radio label::after,
+label.radio-inline::after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 11px;
+  left: 3px;
+  top: 3px;
+  margin-top: 3px;
+  border-radius: 50%;
+  background-color: #555555;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+.radio label.focus::before,
+label.radio-inline.focus::before {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.radio label.checked::after,
+label.radio-inline.checked::after {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.radio label.disabled,
+label.radio-inline.disabled {
+  opacity: 0.65;
+}
+.radio label.disabled::before,
+label.radio-inline.disabled::before {
+  cursor: not-allowed;
+}
+.radio-primary label::after,
+label.radio-primary::after {
+  background-color: #337ab7;
+}
+.radio-primary label.checked::before,
+label.radio-primary.checked::before {
+  border-color: #337ab7;
+}
+.radio-primary label.checked::after,
+label.radio-primary.checked::after {
+  background-color: #337ab7;
+}
+.radio-danger label::after,
+label.radio-danger::after {
+  background-color: #d9534f;
+}
+.radio-danger label.checked::before,
+label.radio-danger.checked::before {
+  border-color: #d9534f;
+}
+.radio-danger label.checked::after,
+label.radio-danger.checked::after {
+  background-color: #d9534f;
+}
+.radio-info label::after,
+label.radio-info::after {
+  background-color: #5bc0de;
+}
+.radio-info label.checked::before,
+label.radio-info.checked::before {
+  border-color: #5bc0de;
+}
+.radio-info label.checked::after,
+label.radio-info.checked::after {
+  background-color: #5bc0de;
+}
+.radio-warning label::after,
+label.radio-warning::after {
+  background-color: #f0ad4e;
+}
+.radio-warning label.checked::before,
+label.radio-warning.checked::before {
+  border-color: #f0ad4e;
+}
+.radio-warning label.checked::after,
+label.radio-warning.checked::after {
+  background-color: #f0ad4e;
+}
+.radio-success label::after,
+label.radio-success::after {
+  background-color: #5cb85c;
+}
+.radio-success label.checked::before,
+label.radio-success.checked::before {
+  border-color: #5cb85c;
+}
+.radio-success label.checked::after,
+label.radio-success.checked::after {
+  background-color: #5cb85c;
+}
+.radio label.checked:after,
+.checkbox label.checked:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+body.rtl .checkbox label,
+html.rtl .checkbox label,
+html[dir=rtl] .checkbox label,
+body.rtl label.checkbox-inline,
+html.rtl label.checkbox-inline,
+html[dir=rtl] label.checkbox-inline {
+  padding-right: 20px;
+  padding-left: 0;
+}
+body.rtl .checkbox label::before,
+html.rtl .checkbox label::before,
+html[dir=rtl] .checkbox label::before,
+body.rtl label.checkbox-inline::before,
+html.rtl label.checkbox-inline::before,
+html[dir=rtl] label.checkbox-inline::before {
+  left: auto;
+  right: 0;
+}
+body.rtl .checkbox label::after,
+html.rtl .checkbox label::after,
+html[dir=rtl] .checkbox label::after,
+body.rtl label.checkbox-inline::after,
+html.rtl label.checkbox-inline::after,
+html[dir=rtl] label.checkbox-inline::after {
+  left: auto;
+  right: 0;
+  padding-left: 0;
+  padding-right: 3px;
+}
+body.rtl .checkbox label.indeterminated::after,
+html.rtl .checkbox label.indeterminated::after,
+html[dir=rtl] .checkbox label.indeterminated::after,
+body.rtl label.checkbox-inline.indeterminated::after,
+html.rtl label.checkbox-inline.indeterminated::after,
+html[dir=rtl] label.checkbox-inline.indeterminated::after {
+  margin-left: 0;
+  margin-right: -16.5px;
+}
+body.rtl .radio label,
+html.rtl .radio label,
+html[dir=rtl] .radio label,
+body.rtl label.radio-inilne,
+html.rtl label.radio-inilne,
+html[dir=rtl] label.radio-inilne {
+  padding-left: 0;
+  padding-right: 20px;
+}
+body.rtl .radio label::before,
+html.rtl .radio label::before,
+html[dir=rtl] .radio label::before,
+body.rtl label.radio-inilne::before,
+html.rtl label.radio-inilne::before,
+html[dir=rtl] label.radio-inilne::before {
+  left: auto;
+  right: 0;
+}
+body.rtl .radio label::after,
+html.rtl .radio label::after,
+html[dir=rtl] .radio label::after,
+body.rtl label.radio-inilne::after,
+html.rtl label.radio-inilne::after,
+html[dir=rtl] label.radio-inilne::after {
+  left: auto;
+  right: 3px;
+}

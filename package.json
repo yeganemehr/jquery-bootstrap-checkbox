@@ -1,0 +1,34 @@
+{
+  "name": "jquery-bootstrap-checkbox",
+  "description": "Font Awesome Bootstrap Checkboxes & Radios. jquery and css way to make inputs look prettier.",
+  "license": "MIT",
+  "homepage": "https://git.jeyserver.com/yeganemehr/jquery-bootstrap-checkbox",
+  "author": {
+    "name": "yeganemehr",
+    "url": "http://yeganemehr.ir"
+  },
+  "bugs": {
+    "url": "https://git.jeyserver.com/yeganemehr/jquery-bootstrap-checkbox"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  
+  "keywords": [
+    "jquery",
+    "bootstrap",
+    "font-awesome",
+    "less"
+  ],
+  
+  "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.jeyserver.com/yeganemehr/jquery-bootstrap-checkbox.git"
+  },
+  "version": "1.0.0"
+}
