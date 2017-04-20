@@ -40,7 +40,7 @@
 		border-radius: 50%;
 	}
 }
-.checkbox label, label.checkbox-inline{
+.checkbox label, label.checkbox-inline, .checkbox-inline > label{
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -171,7 +171,7 @@
 
 	}
 }
-.radio label, label.radio-inline{
+.radio label, label.radio-inline, .radio-inline > label{
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -241,7 +241,7 @@
 }
 
 body.rtl, html.rtl, html[dir=rtl]{
-	.checkbox label, label.checkbox-inline{
+	.checkbox label, label.checkbox-inline, .checkbox-inline > label{
 		padding-right: 20px;
 		padding-left: 0;
 		&::before{
@@ -262,7 +262,7 @@ body.rtl, html.rtl, html[dir=rtl]{
 			}
 		}
 	}
-	.radio label, label.radio-inilne{
+	.radio label, label.radio-inilne,.radio-inilne > label{
 		padding-left: 0;
 		padding-right: 20px;
 		&::before{

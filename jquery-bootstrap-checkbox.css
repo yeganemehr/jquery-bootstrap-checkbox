@@ -5,14 +5,16 @@
   border-radius: 50%;
 }
 .checkbox label,
-label.checkbox-inline {
+label.checkbox-inline,
+.checkbox-inline > label {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   padding-left: 20px;
 }
 .checkbox label::before,
-label.checkbox-inline::before {
+label.checkbox-inline::before,
+.checkbox-inline > label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -28,7 +30,8 @@ label.checkbox-inline::before {
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 .checkbox label::after,
-label.checkbox-inline::after {
+label.checkbox-inline::after,
+.checkbox-inline > label::after {
   display: inline-block;
   position: absolute;
   width: 16px;
@@ -42,17 +45,20 @@ label.checkbox-inline::after {
   color: #555555;
 }
 .checkbox label.focus::before,
-label.checkbox-inline.focus::before {
+label.checkbox-inline.focus::before,
+.checkbox-inline > label.focus::before {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .checkbox label.checked::after,
-label.checkbox-inline.checked::after {
+label.checkbox-inline.checked::after,
+.checkbox-inline > label.checked::after {
   font-family: 'FontAwesome';
   content: "\f00c";
 }
 .checkbox label.indeterminate::after,
-label.checkbox-inline.indeterminate::after {
+label.checkbox-inline.indeterminate::after,
+.checkbox-inline > label.indeterminate::after {
   display: block;
   content: " ";
   width: 10px;
@@ -63,30 +69,36 @@ label.checkbox-inline.indeterminate::after {
   margin-top: 7px;
 }
 .checkbox label.disabled,
-label.checkbox-inline.disabled {
+label.checkbox-inline.disabled,
+.checkbox-inline > label.disabled {
   opacity: 0.65;
 }
 .checkbox label.disabled::before,
-label.checkbox-inline.disabled::before {
+label.checkbox-inline.disabled::before,
+.checkbox-inline > label.disabled::before {
   background-color: #eeeeee;
   cursor: not-allowed;
 }
 .checkbox label input[type="checkbox"],
-label.checkbox-inline input[type="checkbox"] {
+label.checkbox-inline input[type="checkbox"],
+.checkbox-inline > label input[type="checkbox"] {
   opacity: 0;
   z-index: 1;
   cursor: pointer;
 }
 .checkbox label input[type="checkbox"]:disabled,
-label.checkbox-inline input[type="checkbox"]:disabled {
+label.checkbox-inline input[type="checkbox"]:disabled,
+.checkbox-inline > label input[type="checkbox"]:disabled {
   cursor: not-allowed;
 }
 .checkbox label input[type="checkbox"]:disabled + label,
-label.checkbox-inline input[type="checkbox"]:disabled + label {
+label.checkbox-inline input[type="checkbox"]:disabled + label,
+.checkbox-inline > label input[type="checkbox"]:disabled + label {
   opacity: 0.65;
 }
 .checkbox label input[type="checkbox"]:disabled + label::before,
-label.checkbox-inline input[type="checkbox"]:disabled + label::before {
+label.checkbox-inline input[type="checkbox"]:disabled + label::before,
+.checkbox-inline > label input[type="checkbox"]:disabled + label::before {
   background-color: #eeeeee;
   cursor: not-allowed;
 }
@@ -192,14 +204,16 @@ label.checkbox-success.indeterminate::after {
   cursor: not-allowed;
 }
 .radio label,
-label.radio-inline {
+label.radio-inline,
+.radio-inline > label {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   padding-left: 20px;
 }
 .radio label::before,
-label.radio-inline::before {
+label.radio-inline::before,
+.radio-inline > label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -215,7 +229,8 @@ label.radio-inline::before {
   transition: border 0.15s ease-in-out;
 }
 .radio label::after,
-label.radio-inline::after {
+label.radio-inline::after,
+.radio-inline > label::after {
   display: inline-block;
   position: absolute;
   content: " ";
@@ -236,23 +251,27 @@ label.radio-inline::after {
   transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
 }
 .radio label.focus::before,
-label.radio-inline.focus::before {
+label.radio-inline.focus::before,
+.radio-inline > label.focus::before {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 .radio label.checked::after,
-label.radio-inline.checked::after {
+label.radio-inline.checked::after,
+.radio-inline > label.checked::after {
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 .radio label.disabled,
-label.radio-inline.disabled {
+label.radio-inline.disabled,
+.radio-inline > label.disabled {
   opacity: 0.65;
 }
 .radio label.disabled::before,
-label.radio-inline.disabled::before {
+label.radio-inline.disabled::before,
+.radio-inline > label.disabled::before {
   cursor: not-allowed;
 }
 .radio-primary label::after,
@@ -325,7 +344,10 @@ html.rtl .checkbox label,
 html[dir=rtl] .checkbox label,
 body.rtl label.checkbox-inline,
 html.rtl label.checkbox-inline,
-html[dir=rtl] label.checkbox-inline {
+html[dir=rtl] label.checkbox-inline,
+body.rtl .checkbox-inline > label,
+html.rtl .checkbox-inline > label,
+html[dir=rtl] .checkbox-inline > label {
   padding-right: 20px;
   padding-left: 0;
 }
@@ -334,7 +356,10 @@ html.rtl .checkbox label::before,
 html[dir=rtl] .checkbox label::before,
 body.rtl label.checkbox-inline::before,
 html.rtl label.checkbox-inline::before,
-html[dir=rtl] label.checkbox-inline::before {
+html[dir=rtl] label.checkbox-inline::before,
+body.rtl .checkbox-inline > label::before,
+html.rtl .checkbox-inline > label::before,
+html[dir=rtl] .checkbox-inline > label::before {
   left: auto;
   right: 0;
 }
@@ -343,7 +368,10 @@ html.rtl .checkbox label::after,
 html[dir=rtl] .checkbox label::after,
 body.rtl label.checkbox-inline::after,
 html.rtl label.checkbox-inline::after,
-html[dir=rtl] label.checkbox-inline::after {
+html[dir=rtl] label.checkbox-inline::after,
+body.rtl .checkbox-inline > label::after,
+html.rtl .checkbox-inline > label::after,
+html[dir=rtl] .checkbox-inline > label::after {
   left: auto;
   right: 0;
   padding-left: 0;
@@ -354,7 +382,10 @@ html.rtl .checkbox label.indeterminated::after,
 html[dir=rtl] .checkbox label.indeterminated::after,
 body.rtl label.checkbox-inline.indeterminated::after,
 html.rtl label.checkbox-inline.indeterminated::after,
-html[dir=rtl] label.checkbox-inline.indeterminated::after {
+html[dir=rtl] label.checkbox-inline.indeterminated::after,
+body.rtl .checkbox-inline > label.indeterminated::after,
+html.rtl .checkbox-inline > label.indeterminated::after,
+html[dir=rtl] .checkbox-inline > label.indeterminated::after {
   margin-left: 0;
   margin-right: -16.5px;
 }
@@ -363,7 +394,10 @@ html.rtl .radio label,
 html[dir=rtl] .radio label,
 body.rtl label.radio-inilne,
 html.rtl label.radio-inilne,
-html[dir=rtl] label.radio-inilne {
+html[dir=rtl] label.radio-inilne,
+body.rtl .radio-inilne > label,
+html.rtl .radio-inilne > label,
+html[dir=rtl] .radio-inilne > label {
   padding-left: 0;
   padding-right: 20px;
 }
@@ -372,7 +406,10 @@ html.rtl .radio label::before,
 html[dir=rtl] .radio label::before,
 body.rtl label.radio-inilne::before,
 html.rtl label.radio-inilne::before,
-html[dir=rtl] label.radio-inilne::before {
+html[dir=rtl] label.radio-inilne::before,
+body.rtl .radio-inilne > label::before,
+html.rtl .radio-inilne > label::before,
+html[dir=rtl] .radio-inilne > label::before {
   left: auto;
   right: 0;
 }
@@ -381,7 +418,10 @@ html.rtl .radio label::after,
 html[dir=rtl] .radio label::after,
 body.rtl label.radio-inilne::after,
 html.rtl label.radio-inilne::after,
-html[dir=rtl] label.radio-inilne::after {
+html[dir=rtl] label.radio-inilne::after,
+body.rtl .radio-inilne > label::after,
+html.rtl .radio-inilne > label::after,
+html[dir=rtl] .radio-inilne > label::after {
   left: auto;
   right: 3px;
 }
