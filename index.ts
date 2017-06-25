@@ -3,29 +3,29 @@
 import * as $ from "jquery";
 $.fn.bootstrapCheckbox = function(){
 	function setClasses(){
-		let $label = $(this).parents('label');
-		let checked:boolean = $(this).prop('checked');
-		if(checked){
-			if(!$label.hasClass('checked')){
-				$label.addClass('checked');
+		const $label = $(this).parents("label");
+		const checked: boolean = $(this).prop("checked");
+		if (checked){
+			if (!$label.hasClass("checked")){
+				$label.addClass("checked");
 			}
-			$label.removeClass('indeterminate');
+			$label.removeClass("indeterminate");
 		}else{
-			$label.removeClass('checked');
-			let indeterminate:boolean = $(this).prop('checked');
-			if(indeterminate){
-				$label.addClass('indeterminate');
+			$label.removeClass("checked");
+			const indeterminate: boolean = $(this).prop("checked");
+			if (indeterminate){
+				$label.addClass("indeterminate");
 			}
 		}
 	}
-	let $checkboxs = $(this);
+	const $checkboxs = $(this);
 	$checkboxs.each(setClasses);
-	$checkboxs.on('change', setClasses);
-	$checkboxs.on('focus', function(){
-		$(this).parents('label').addClass('focus');
+	$checkboxs.on("change", setClasses);
+	$checkboxs.on("focus", function(){
+		$(this).parents("label").addClass("focus");
 	});
-	$checkboxs.on('blur', function(){
-		$(this).parents('label').removeClass('focus');
+	$checkboxs.on("blur", function(){
+		$(this).parents("label").removeClass("focus");
 	});
-	
-}
+
+};
