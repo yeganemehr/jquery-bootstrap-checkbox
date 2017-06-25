@@ -15,17 +15,19 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/bootstrap": "^3.3.34",
+    "@types/jquery": "^3.2.4"
+  },
   "optionalDependencies": {},
-  
   "keywords": [
     "jquery",
     "bootstrap",
     "font-awesome",
     "less"
   ],
-  
-  "main": "index.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://git.jeyserver.com/yeganemehr/jquery-bootstrap-checkbox.git"

@@ -1,4 +1,4 @@
-/// <reference path="./index.d.ts"/>
+/// <reference path="./jquery.d.ts"/>
 
 import * as $ from "jquery";
 $.fn.bootstrapCheckbox = function(){

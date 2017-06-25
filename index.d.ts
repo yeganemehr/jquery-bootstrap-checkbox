@@ -1,5 +1,1 @@
-/// <reference types="jquery"/>
-
-interface JQuery {
-	bootstrapCheckbox();
-}
+/// <reference path="jquery.d.ts" />
